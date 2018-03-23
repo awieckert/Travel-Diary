@@ -29,7 +29,7 @@ const locations = [
     {
         title: "New York",
         img: "/img/new-york.jpg",
-        description: "Get the F@*! outta the way!",
+        description: "Welcome to New York, F@*! outta the way!",
     },
 ]
 
@@ -53,3 +53,15 @@ const cardBuilder = (locationArray) => {
 };
 
 cardBuilder(locations);
+
+const allMyButtons = document.getElementsByClassName("diary-button");
+
+const addEventListeners = () => {
+    for(let i = 0; i < allMyButtons.length; i++){
+        allMyButtons[i].addEventListener("click", (e) => {
+            console.log("Event: ", e);
+        })
+    }
+};
+
+addEventListeners();
