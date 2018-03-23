@@ -65,3 +65,7 @@ const addEventListeners = () => {
 };
 
 addEventListeners();
+
+const addDiaryEntry = () => {
+    let textToCopy = e.target.previousSibling.value;
+}
