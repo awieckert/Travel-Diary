@@ -54,14 +54,28 @@ const cardBuilder = (locationArray) => {
 
 cardBuilder(locations);
 
+const addDiaryEntry = (e) => {
+    let textToCopy = e.target.previousSibling.value;
+    console.log("Value of event target: ", textToCopy);
+    stringToPrint = "";
+    stringToPrint += `<div class="entry">`;
+    stringToPrint +=   `<h3>${e.target.parentElement.firstChild.innerHTML}</h3>`;
+    stringToPrint +=   `<p class="entry-text">${textToCopy}</p>`;
+    stringToPrint += `</div>`;
+    printToDom(stringToPrint, "diary-container");
+    e.target.previousSibling.value = "";
+};
+
 const allMyButtons = document.getElementsByClassName("diary-button");
 
 const addEventListeners = () => {
     for(let i = 0; i < allMyButtons.length; i++){
         allMyButtons[i].addEventListener("click", (e) => {
             console.log("Event: ", e);
+            addDiaryEntry(e);
         })
     }
 };
 
 addEventListeners();
+
