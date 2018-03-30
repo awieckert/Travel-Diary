@@ -54,17 +54,33 @@ const cardBuilder = (locationArray) => {
 
 cardBuilder(locations);
 
+const deleteEvent = (e) => {
+    let itemToDelete = e.target.parentNode;
+    itemToDelete.style.display = "none";
+};
+
+const makeDeleteEvent = () => {
+    let deleteButton = document.getElementById('delete');
+    deleteButton.addEventListener("click", deleteEvent);
+}
+
 const addDiaryEntry = (e) => {
     let textToCopy = e.target.previousSibling.value;
     let stringToPrint = "";
     stringToPrint += `<div class="entry">`;
     stringToPrint +=   `<h3>${e.target.parentElement.firstChild.innerHTML}</h3>`;
+    stringToPrint +=   `<button id="delete" class="delete">Delete</button>`;
     stringToPrint +=   `<p class="entry-text">${textToCopy}</p>`;
     stringToPrint += `</div>`;
     printToDom(stringToPrint, "diary-container");
     e.target.previousSibling.value = "";
     e.target.parentNode.classList.add('newColor');
+    makeDeleteEvent();
 };
+
+
+
+
 
 const allMyButtons = document.getElementsByClassName("diary-button");
 

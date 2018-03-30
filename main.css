@@ -42,3 +42,16 @@ img {
 .newColor{
     background-color: royalblue;
 }
+
+.delete {
+    display: inline-block;
+    margin-left: 80%;
+}
+
+div h3 {
+    display: inline-block;
+}
+
+p {
+    display: block;
+}
