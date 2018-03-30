@@ -38,3 +38,7 @@ img {
     border: 2px solid slategray;
     width: 50%;
 }
+
+.newColor{
+    background-color: royalblue;
+}

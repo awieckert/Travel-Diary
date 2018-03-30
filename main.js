@@ -63,6 +63,7 @@ const addDiaryEntry = (e) => {
     stringToPrint += `</div>`;
     printToDom(stringToPrint, "diary-container");
     e.target.previousSibling.value = "";
+    e.target.parentNode.classList.add('newColor');
 };
 
 const allMyButtons = document.getElementsByClassName("diary-button");
