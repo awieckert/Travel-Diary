@@ -28,3 +28,17 @@ img {
 .green {
     color: green;
 }
+
+#diary-container {
+    display: flex;
+    justify-content: center;
+}
+
+.entry {
+    border: 2px solid slategray;
+    width: 50%;
+}
+
+.newColor{
+    background-color: royalblue;
+}
