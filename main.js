@@ -29,7 +29,7 @@ const locations = [
     {
         title: "New York",
         img: "/img/new-york.jpg",
-        description: "Welcome to New York, F@*! outta the way!",
+        description: "Welcome to New York, Get the F@*! outta the way!",
     },
 ]
 
