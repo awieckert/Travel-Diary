@@ -11,12 +11,20 @@ img {
     justify-content: center;
 }
 
+.main-container {
+    background-image: url(/img/backgroud.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .location-card {
     margin: 1%;
     padding: 2%;
     width: 400px;
     border: 2px solid slategray;
     text-align: center;
+    box-shadow: -5px 5px 5px;
+    opacity: 0.9;
 }
 
 .diary-button {
@@ -32,11 +40,16 @@ img {
 #diary-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .entry {
     border: 2px solid slategray;
     width: 50%;
+    box-shadow: -5px 5px 5px;
+    opacity: 0.9;
+    display: block;
+    margin-top: 20px;
 }
 
 .newColor{
@@ -45,10 +58,20 @@ img {
 
 .delete {
     display: inline-block;
-    margin-left: 80%;
+    margin-left: 2%;
+}
+
+.edit {
+    display: inline-block;
+    margin-left: 75%;
+}
+
+#text-field {
+    padding-left: 15px;
 }
 
 div h3 {
+    padding-left: 15px;
     display: inline-block;
 }
 
